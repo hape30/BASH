@@ -1,4 +1,5 @@
 #!/bin/bash
+chmod +x Test1.sh
 ./script17.sh 
 echo "проверка 1 теста...."
 if [[ $? -eq 1 ]]
