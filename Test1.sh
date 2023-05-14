@@ -7,7 +7,7 @@ then
   echo "1 тест прошел успешно"
 else
   echo "1 тест не пройдет"
-   exit 1 
+  exit 1 
 fi
   echo "проверка 2 теста...."
 ./script17.sh inputafile outputafile word zero 
