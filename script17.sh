@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [[ $# -lt 3 ]]
 then
     echo "Мало аргумнтов "
@@ -14,7 +15,12 @@ then
     echo " $1 || $2 не являтся файлами"
     exit 1
 fi
+input_file=$1
+output_file=$2
+search_word=$3
 
-count=$(grep -c "$3" "$1")
-echo "$count" > "$2"
+grep -o  "$search_word" "$input_file" | wc -l > "$output_file"
+#grep -o "$search_word" "$input_file" — команда grep ищет в файле $input_file все вхождения слова, которое содержится в переменной $search_word. Опция -o указывает на вывод только самих найденных слов, без контекста.
+
+
 echo "Программа выполнена успешно"
