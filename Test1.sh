@@ -1,7 +1,7 @@
 #!/bin/bash
 chmod +x script17.sh
 ./script17.sh 
-  echo "проверка 1 теста...."
+  echo "проверка 1 теста..."
 if [[ $? -eq 1 ]]
 then 
   echo "1 тест прошел успешно"
